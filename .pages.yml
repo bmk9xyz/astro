@@ -77,10 +77,7 @@ content:
             label: Alt text
             type: string
             required: false
-
-      # >>> PHẦN SOẠN THẢO NỘI DUNG <<<
       - name: body
         label: Body
         type: rich-text
         required: false
-
