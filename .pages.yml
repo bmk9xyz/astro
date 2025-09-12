@@ -14,7 +14,7 @@ content:
   - name: blogs
     label: Blogs
     type: collection
-    path: src/content/blogs
+    path: src/content/blogs/
     filename: "{year}-{month}-{day}-{fields.title}.md"
     view:
       fields: [title, draft, pubDate, author, tags]
