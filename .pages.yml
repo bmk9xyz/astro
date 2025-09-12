@@ -80,11 +80,38 @@ content:
             label: Alt text
             type: string
             required: false
-      - name: body
+       - name: body
         label: Body
-        type: rich-text
-        required: false
-        options:
-            media: public_images
-            path: src/assets/images
-            extensions: [jpg, jpeg, png, webp, gif, svg]
+        type: block
+        list: true
+        blocks:
+          - name: text
+            label: Text
+            fields:
+              - name: content
+                label: Content
+                type: rich-text
+                options:
+                  media: public_images   # cho phép chèn ảnh vào text
+          - name: video
+            label: Video
+            fields:
+              - name: source
+                label: Source
+                type: select
+                options:
+                  values: [youtube, vimeo, file]
+              - name: url
+                label: Video URL (YouTube/Vimeo)
+                type: string
+                required: false
+              - name: file
+                label: Upload video file
+                type: file
+                required: false
+                options:
+                  media: public_videos
+                  categories: [video]    # chỉ nhận mp4/mov/… theo danh mục video
+              - name: caption
+                label: Caption
+                type: string
