@@ -6,7 +6,7 @@ content:
   - name: posts
     label: Posts
     path: src/content/blogs
-    type: collection
+    type:  rich-text
     fields:
       # ... fields defined here ...
   - name: authors
