@@ -1,86 +1,30 @@
+# .pages.yml (phần quan trọng)
 media:
-  input: 
-  output: src/assets/images
-
-# .pages.yml
-
-media:
-  # Ảnh “cover” dùng frontmatter image() của Astro → phải nằm trong src/
   - name: astro_images
-    label: Astro Images (src)
-    input: src/assets/images
-    output: src/assets/images  # URL sẽ chèn vào nội dung nếu có dùng config này
-
-  # Ảnh chèn trong body → để public phục vụ thẳng ở /images
+    input: src/content/blogs/_images
+    output: /images
   - name: public_images
-    label: Public Images
-    input: src/assets/images
-    output: src/assets/images
-
+    input: public/images
+    output: /images
+  - name: public_videos
+    input: public/videos
+    output: /videos
 
 content:
   - name: blogs
     label: Blogs
     type: collection
-    path: "src/content/blogs"
-    filename: "{year}-{month}-{day}-{fields.title}.md"  # đổi .mdx nếu bạn dùng MDX
+    path: src/content/blogs
+    filename: "{year}-{month}-{day}-{fields.title}.md"
     view:
       fields: [title, draft, pubDate, author, tags]
-      default:
-        sort: pubDate
-        order: desc
+      default: { sort: pubDate, order: desc }
 
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
+      # …(các meta fields: title, description, pubDate, author, tags, draft, image{url,alt})…
 
-      - name: description
-        label: Description
-        type: text
-        required: true
-
-      - name: pubDate
-        label: Publication Date
-        type: date
-        required: true
-        options:
-          format: yyyy-MM-dd
-          time: false
-
-      - name: author
-        label: Author
-        type: string
-        required: false
-
-      - name: tags
-        label: Tags
-        type: string
-        required: false
-        
-
-      - name: draft
-        label: Draft
-        type: boolean
-        default: false
-
-      - name: image
-        label: Cover Image
-        type: object
-        required: false
-        fields:
-          - name: url
-            label: Image file
-            type: image
-            path: "src/assets/images"
-            required: true
-            extensions: [jpg, jpeg, png, webp, gif, svg]
-          - name: alt
-            label: Alt text
-            type: string
-            required: false
-       - name: body
+      # BODY = danh sách khối (Text / Video)
+      - name: body
         label: Body
         type: block
         list: true
