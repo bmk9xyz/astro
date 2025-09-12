@@ -2,17 +2,6 @@ media:
   input: src/assets/images
   output: src/assets/images
 
-# .pages.yml — Pages CMS config cho Astro blog (src/content/blogs)
-
-# (Tuỳ chọn) Cấu hình nơi lưu media khi upload từ CMS.
-# Với schema dùng image() của Astro, nên đặt ảnh TRONG thư mục 'src'
-# để có thể import tương đối từ bài viết.
-
-# .pages.yml — Astro blog (src/content/blogs)
-
-media:
-  input: src/content/blogs/_images
-  output: /images
 content:
   - name: blogs
     label: Blogs
