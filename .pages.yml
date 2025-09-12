@@ -84,3 +84,7 @@ content:
         label: Body
         type: rich-text
         required: false
+        options:
+            media: public_images
+            path: src/assets/images
+            extensions: [jpg, jpeg, png, webp, gif, svg]
