@@ -1,6 +1,22 @@
 media:
-  input: src/assets/images
+  input: 
   output: src/assets/images
+
+# .pages.yml
+
+media:
+  # Ảnh “cover” dùng frontmatter image() của Astro → phải nằm trong src/
+  - name: astro_images
+    label: Astro Images (src)
+    input: src/assets/images
+    output: src/assets/images  # URL sẽ chèn vào nội dung nếu có dùng config này
+
+  # Ảnh chèn trong body → để public phục vụ thẳng ở /images
+  - name: public_images
+    label: Public Images
+    input: src/assets/images
+    output: src/assets/images
+
 
 content:
   - name: blogs
@@ -57,7 +73,7 @@ content:
           - name: url
             label: Image file
             type: image
-            path: "src/content/blogs/_images"
+            path: "src/assets/images"
             required: true
             extensions: [jpg, jpeg, png, webp, gif, svg]
           - name: alt
