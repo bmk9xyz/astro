@@ -84,7 +84,3 @@ content:
         type: rich-text
         required: false
 
-# (Tuỳ chọn) Merge ghi đè phần đã khai báo field, giữ nguyên các key khác nếu có.
-settings:
-  content:
-    merge: true
