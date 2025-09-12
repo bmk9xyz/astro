@@ -2,15 +2,86 @@ media:
   input: src/assets/images
   output: src/assets/images
 
+# .pages.yml — Pages CMS config cho Astro blog (src/content/blogs)
+
+# (Tuỳ chọn) Cấu hình nơi lưu media khi upload từ CMS.
+# Với schema dùng image() của Astro, nên đặt ảnh TRONG thư mục 'src'
+# để có thể import tương đối từ bài viết.
+
 content:
-  - name: posts
-    label: Posts
-    path: src/content/blogs
-    type:  rich-text
+  - name: blogs
+    label: Blogs
+    type: collection
+    path: "src/content/blogs"
+    # Tạo file mới theo mẫu tên dưới đây (có ngày + tiêu đề).
+    # Nếu bạn muốn dùng .mdx, đổi đuôi ở đây thành .mdx.
+    filename: "{year}-{month}-{day}-{fields.title}.md"
+    # Tuỳ biến hiển thị listing:
+    view:
+      fields: [title, draft, pubDate, author, tags]
+      default:
+        sort: pubDate
+        order: desc
+
+    # Các trường map 1-1 với Astro schema
     fields:
-      # ... fields defined here ...
-  - name: authors
-    label: Authors
-    path: src/_data/authors.json
-    type: file
-    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: description
+        label: Description
+        type: text
+        required: true
+
+      - name: pubDate
+        label: Publication Date
+        type: date
+        required: true
+        options:
+          # chỉ ngày (không giờ); nếu bạn muốn kèm giờ, thêm time: true
+          format: yyyy-MM-dd
+          time: false
+
+      - name: author
+        label: Author
+        type: string
+        required: false
+
+      - name: tags
+        label: Tags
+        type: list
+        required: false
+        of:
+          type: string
+
+      - name: draft
+        label: Draft
+        type: boolean
+        required: false
+        default: false
+
+      # image: { url, alt? } — giữ đúng cấu trúc object như trong schema Astro
+      - name: image
+        label: Cover Image
+        type: object
+        required: false
+        fields:
+          - name: url
+            label: Image file
+            type: image
+            # Lưu file ảnh vào thư mục media ở trên
+            path: "src/content/blogs/_images"
+            required: true
+            # Bạn có thể giới hạn loại file nếu muốn:
+            extensions: [jpg, jpeg, png, webp, gif, svg]
+          - name: alt
+            label: Alt text
+            type: string
+            required: false
+
+# (Tuỳ chọn) Merge ghi đè phần đã khai báo field, giữ nguyên các key khác nếu có.
+settings:
+  content:
+    merge: true
