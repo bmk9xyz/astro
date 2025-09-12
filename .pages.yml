@@ -13,7 +13,6 @@ media:
 media:
   input: src/content/blogs/_images
   output: /images
-
 content:
   - name: blogs
     label: Blogs
