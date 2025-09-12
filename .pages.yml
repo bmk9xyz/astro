@@ -8,22 +8,24 @@ media:
 # Với schema dùng image() của Astro, nên đặt ảnh TRONG thư mục 'src'
 # để có thể import tương đối từ bài viết.
 
+# .pages.yml — Astro blog (src/content/blogs)
+
+media:
+  input: src/content/blogs/_images
+  output: /images
+
 content:
   - name: blogs
     label: Blogs
     type: collection
     path: "src/content/blogs"
-    # Tạo file mới theo mẫu tên dưới đây (có ngày + tiêu đề).
-    # Nếu bạn muốn dùng .mdx, đổi đuôi ở đây thành .mdx.
-    filename: "{year}-{month}-{day}-{fields.title}.md"
-    # Tuỳ biến hiển thị listing:
+    filename: "{year}-{month}-{day}-{fields.title}.md"  # đổi .mdx nếu bạn dùng MDX
     view:
       fields: [title, draft, pubDate, author, tags]
       default:
         sort: pubDate
         order: desc
 
-    # Các trường map 1-1 với Astro schema
     fields:
       - name: title
         label: Title
@@ -40,7 +42,6 @@ content:
         type: date
         required: true
         options:
-          # chỉ ngày (không giờ); nếu bạn muốn kèm giờ, thêm time: true
           format: yyyy-MM-dd
           time: false
 
@@ -59,10 +60,8 @@ content:
       - name: draft
         label: Draft
         type: boolean
-        required: false
         default: false
 
-      # image: { url, alt? } — giữ đúng cấu trúc object như trong schema Astro
       - name: image
         label: Cover Image
         type: object
@@ -71,15 +70,19 @@ content:
           - name: url
             label: Image file
             type: image
-            # Lưu file ảnh vào thư mục media ở trên
             path: "src/content/blogs/_images"
             required: true
-            # Bạn có thể giới hạn loại file nếu muốn:
             extensions: [jpg, jpeg, png, webp, gif, svg]
           - name: alt
             label: Alt text
             type: string
             required: false
+
+      # >>> PHẦN SOẠN THẢO NỘI DUNG <<<
+      - name: body
+        label: Body
+        type: rich-text
+        required: false
 
 # (Tuỳ chọn) Merge ghi đè phần đã khai báo field, giữ nguyên các key khác nếu có.
 settings:
