@@ -52,7 +52,7 @@ content:
 
       - name: tags
         label: Tags
-        type: list
+        type: string
         required: false
         
 
