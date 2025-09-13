@@ -1,61 +1,333 @@
-# .pages.yml (phần quan trọng)
 media:
-  - name: astro_images
-    input: src/content/blogs/_images
-    output: /images
-  - name: public_images
-    input: public/images
-    output: /images
-  - name: public_videos
-    input: public/videos
-    output: /videos
+  # Upload images to public/images and reference them at /images/...
+  input: public/images
+  output: /images
+
+settings:
+  # Preserve unknown fields in existing files (safer when schema evolves)
+  content:
+    merge: true
 
 content:
-  - name: blogs
-    label: Blogs
+  # 1) Badminton rackets collection (data + optional body)
+  - name: badminton_rackets
+    label: Badminton Rackets
     type: collection
-    path: src/content/blogs/
-    filename: "{year}-{month}-{day}-{fields.title}.md"
+    path: src/content/badminton-rackets
+    format: yaml-frontmatter
+    filename: "{fields.brand}-{fields.model}.md"
     view:
-      fields: [title, draft, pubDate, author, tags]
-      default: { sort: pubDate, order: desc }
-
+      fields: [ brand, model, price, weightClass, stiffness, productStatus, productionYear ]
+      sort: [ brand, model ]
     fields:
-      # …(các meta fields: title, description, pubDate, author, tags, draft, image{url,alt})…
+      - name: brand
+        label: Brand
+        type: select
+        required: true
+        options:
+          values: [ "Yonex", "Victor", "Li-Ning", "LiNing", "Mizuno", "Kawasaki", "Gosen", "Apacs", "Fleet" ]
 
-      # BODY = danh sách khối (Text / Video)
+      - name: model
+        label: Model
+        type: string
+        required: true
+
+      - name: price
+        label: Price
+        type: number
+        required: true
+
+      - name: weightClass
+        label: Weight Class
+        type: select
+        required: true
+        options:
+          values: [ "1U", "2U", "3U", "4U", "5U", "6U" ]
+
+      - name: balancePoint
+        label: Balance Point
+        type: select
+        options:
+          values: [ "head-light", "even", "slightly-head-heavy", "head-heavy", "extra-head-heavy" ]
+
+      - name: stiffness
+        label: Stiffness
+        type: select
+        options:
+          values: [ "flexible", "medium", "stiff", "extra-stiff" ]
+
+      - name: level
+        label: Level
+        type: select
+        options:
+          values: [ "beginner", "recreational", "semi-pro", "pro" ]
+
+      - name: gripSize
+        label: Grip Size
+        type: select
+        options:
+          values: [ "G2", "G3", "G4", "G5", "G6" ]
+
+      - name: swingweightClass
+        label: Swingweight Class
+        type: select
+        options:
+          values: [ "under-80", "80-84", "85-89", "90-94", "95-plus" ]
+
+      - name: playingStyles
+        label: Playing Styles
+        type: select
+        options:
+          multiple: true
+          values: [ "offense", "all-round", "drive", "defense", "rally", "net-play", "rear-court" ]
+
+      - name: discipline
+        label: Discipline
+        type: select
+        options:
+          values: [ "singles", "doubles", "both" ]
+
+      - name: length_mm
+        label: Length (mm)
+        type: number
+
+      - name: handleLength_mm
+        label: Handle Length (mm)
+        type: number
+
+      - name: headSize_cm2
+        label: Head Size (cm²)
+        type: number
+
+      - name: materials
+        label: Materials
+        type: string
+        list: true
+
+      - name: maxStringTension_lbs
+        label: Max String Tension (lbs)
+        type: number
+
+      - name: colors
+        label: Colors
+        type: string
+        list: true
+
+      - name: warranty_months
+        label: Warranty (months)
+        type: number
+
+      - name: productionYear
+        label: Production Year
+        type: number
+        options:
+          min: 1990
+          max: 2025
+
+      - name: itemType
+        label: Item Type
+        type: select
+        options:
+          values: [ "regular", "limited" ]
+
+      - name: productStatus
+        label: Product Status
+        type: select
+        options:
+          values: [ "available", "discontinued" ]
+
+      - name: images
+        label: Images
+        type: image
+        list: true
+
+      - name: tags
+        label: Tags
+        type: select
+        options:
+          multiple: true
+          creatable: true
+
+      - name: buyNow
+        label: Buy Now URL
+        type: string
+        pattern:
+          regex: '^https?://'
+
+      - name: producttitle
+        label: Product Title (optional override)
+        type: string
+
       - name: body
         label: Body
-        type: block
-        list: true
-        blocks:
-          - name: text
-            label: Text
-            fields:
-              - name: content
-                label: Content
-                type: rich-text
-                options:
-                  media: public_images   # cho phép chèn ảnh vào text
-          - name: video
-            label: Video
-            fields:
-              - name: source
-                label: Source
-                type: select
-                options:
-                  values: [youtube, vimeo, file]
-              - name: url
-                label: Video URL (YouTube/Vimeo)
-                type: string
-                required: false
-              - name: file
-                label: Upload video file
-                type: file
-                required: false
-                options:
-                  media: public_videos
-                  categories: [video]    # chỉ nhận mp4/mov/… theo danh mục video
-              - name: caption
-                label: Caption
-                type: string
+        type: rich-text
+
+  # 2) Compare posts (/compare/)
+  - name: compare_posts
+    label: Compare Posts
+    type: collection
+    path: src/content/compare-posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{fields.title}.md"
+    view:
+      fields: [ title, date, compared, tags ]
+      sort: [ date, title ]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+
+      - name: summary
+        label: Summary
+        type: text
+
+      - name: compared
+        label: Compared rackets
+        type: reference
+        options:
+          collection: badminton_rackets
+          multiple: true
+          search: "brand,model"
+          value: "{path}"
+          label: "{brand} {model}"
+
+      - name: tags
+        label: Tags
+        type: select
+        options:
+          multiple: true
+          creatable: true
+
+      - name: body
+        label: Body
+        type: rich-text
+
+  # 3) Blog posts (/blog/)
+  - name: blog
+    label: Blog
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{fields.title}.md"
+    view:
+      fields: [ title, date, draft, tags ]
+      sort: [ date, title ]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: author
+        label: Author
+        type: string
+
+      - name: date
+        label: Published on
+        type: date
+        required: true
+
+      - name: updated
+        label: Updated
+        type: date
+      - name: updatedAt
+        label: Updated At
+        type: date
+      - name: lastmod
+        label: Last Modified
+        type: date
+      - name: lastModified
+        label: Last Modified (alt)
+        type: date
+      - name: modified
+        label: Modified
+        type: date
+      - name: lastUpdated
+        label: Last Updated
+        type: date
+
+      - name: image
+        label: Cover image
+        type: image
+
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+
+      - name: tags
+        label: Tags
+        type: select
+        options:
+          multiple: true
+          creatable: true
+
+      - name: body
+        label: Body
+        type: rich-text
+
+  # 4) Archive content (/archive-content/)
+  - name: archive_content
+    label: Archive Content
+    type: collection
+    path: src/content/archive-content
+    format: yaml-frontmatter
+    filename: "{fields.tax}-{fields.value}.md"
+    view:
+      fields: [ tax, value, draft ]
+      sort: [ tax, value ]
+    fields:
+      - name: tax
+        label: Taxonomy
+        type: select
+        required: true
+        options:
+          values:
+            - brand
+            - weightClass
+            - balancePoint
+            - stiffness
+            - level
+            - gripSize
+            - swingweightClass
+            - playingStyles
+            - discipline
+            - itemType
+            - productStatus
+
+      - name: value
+        label: Value
+        type: string
+        required: true
+
+      - name: title
+        label: Title (optional)
+        type: string
+
+      - name: description
+        label: Description (optional)
+        type: text
+
+      - name: image
+        label: Image (optional)
+        type: image
+
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
