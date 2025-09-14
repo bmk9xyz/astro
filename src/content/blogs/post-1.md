@@ -13,9 +13,7 @@ seo: ""
 updated: "2025-09-12T13:35:06.602Z"
 ---
 
-## Welcome to my _new blog_ about space exploration! Here, I will share my learning journey about the universe around us.## What I've accomplished**Installing Astro**: First, I created a new Astro project and set up this project.**Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-**Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+## Welcome to my _new blog_ about space exploration! Here, I will share my learning journey about the universe around us.## What I've accomplished**Installing Astro**: First, I created a new Astro project and set up this project.**Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.**Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
 
 ## What's nextI will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.Whew! That felt like taking a long walk on Mars! 🟠
 
