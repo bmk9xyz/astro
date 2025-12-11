@@ -1,0 +1,139 @@
+{
+  "id": "project",
+  "metadata": {
+    "name": "Project",
+    "version": "1.0.0",
+    "description": "Portfolio project content type",
+    "category": "Portfolio",
+    "icon": "💼",
+    "createdAt": "2025-12-11T06:14:58.871Z",
+    "updatedAt": "2025-12-11T06:14:58.871Z"
+  },
+  "fields": {
+    "title": {
+      "type": "string",
+      "label": "Title",
+      "required": true,
+      "description": "Project title",
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "string",
+      "label": "URL Slug",
+      "required": true,
+      "description": "URL slug for the project",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "description": {
+      "type": "text",
+      "label": "Description",
+      "required": true,
+      "description": "Project description",
+      "maxLength": 500
+    },
+    "content": {
+      "type": "rich-text",
+      "label": "Content",
+      "description": "Detailed project information with rich text and markdown support"
+    },
+    "featuredImage": {
+      "type": "media",
+      "label": "Featured Image",
+      "mediaTypes": [
+        "image"
+      ],
+      "description": "Featured image for the project"
+    },
+    "gallery": {
+      "type": "array",
+      "label": "Gallery",
+      "description": "Project gallery images",
+      "items": {
+        "type": "media",
+        "label": "Image",
+        "mediaTypes": [
+          "image"
+        ]
+      }
+    },
+    "technologies": {
+      "type": "array",
+      "label": "Technologies",
+      "description": "Technologies used in the project",
+      "items": {
+        "type": "string",
+        "label": "Technology"
+      }
+    },
+    "status": {
+      "type": "select",
+      "label": "Status",
+      "options": [
+        {
+          "label": "Planning",
+          "value": "planning"
+        },
+        {
+          "label": "In Progress",
+          "value": "in-progress"
+        },
+        {
+          "label": "Completed",
+          "value": "completed"
+        },
+        {
+          "label": "Archived",
+          "value": "archived"
+        }
+      ],
+      "description": "Project status"
+    },
+    "liveUrl": {
+      "type": "string",
+      "label": "Live URL",
+      "description": "Live project URL",
+      "validation": [
+        {
+          "type": "pattern",
+          "value": "^https?://.*$",
+          "message": "Must be a valid URL starting with http:// or https://"
+        }
+      ]
+    },
+    "githubUrl": {
+      "type": "string",
+      "label": "GitHub URL",
+      "description": "GitHub repository URL",
+      "validation": [
+        {
+          "type": "pattern",
+          "value": "^https?://.*$",
+          "message": "Must be a valid URL starting with http:// or https://"
+        }
+      ]
+    },
+    "startDate": {
+      "type": "date",
+      "label": "Start Date",
+      "description": "Project start date"
+    },
+    "endDate": {
+      "type": "date",
+      "label": "End Date",
+      "description": "Project completion date"
+    }
+  },
+  "config": {
+    "slug": {
+      "field": "slug",
+      "unique": true
+    },
+    "preview": {
+      "fields": [
+        "title",
+        "description",
+        "featuredImage"
+      ]
+    }
+  }
+}

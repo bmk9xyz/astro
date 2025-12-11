@@ -1,0 +1,79 @@
+{
+  "id": "page",
+  "metadata": {
+    "name": "Page",
+    "version": "1.0.0",
+    "description": "Static page content type",
+    "category": "Content",
+    "icon": "📄",
+    "createdAt": "2025-12-11T06:14:58.871Z",
+    "updatedAt": "2025-12-11T06:14:58.871Z"
+  },
+  "fields": {
+    "title": {
+      "type": "string",
+      "label": "Title",
+      "required": true,
+      "description": "Page title",
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "string",
+      "label": "URL Slug",
+      "required": true,
+      "description": "URL slug for the page",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "content": {
+      "type": "rich-text",
+      "label": "Content",
+      "required": true,
+      "description": "Page content with rich text and markdown support"
+    },
+    "excerpt": {
+      "type": "text",
+      "label": "Excerpt",
+      "description": "Page excerpt or meta description",
+      "maxLength": 300
+    },
+    "featuredImage": {
+      "type": "media",
+      "label": "Featured Image",
+      "mediaTypes": [
+        "image"
+      ],
+      "description": "Featured image for the page"
+    },
+    "published": {
+      "type": "boolean",
+      "label": "Published",
+      "description": "Whether the page is published",
+      "defaultValue": false
+    },
+    "showInNavigation": {
+      "type": "boolean",
+      "label": "Show in Navigation",
+      "description": "Whether to show in site navigation",
+      "defaultValue": false
+    },
+    "order": {
+      "type": "number",
+      "label": "Navigation Order",
+      "description": "Navigation order",
+      "min": 0
+    }
+  },
+  "config": {
+    "slug": {
+      "field": "slug",
+      "unique": true
+    },
+    "preview": {
+      "fields": [
+        "title",
+        "excerpt",
+        "featuredImage"
+      ]
+    }
+  }
+}

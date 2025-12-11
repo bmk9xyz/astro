@@ -1,0 +1,113 @@
+{
+  "id": "blog-post",
+  "metadata": {
+    "name": "Blog Post",
+    "version": "1.0.0",
+    "description": "Blog post content type with rich content features",
+    "category": "Content",
+    "icon": "📝",
+    "createdAt": "2025-12-11T06:14:58.871Z",
+    "updatedAt": "2025-12-11T06:14:58.871Z"
+  },
+  "fields": {
+    "title": {
+      "type": "string",
+      "label": "Title",
+      "required": true,
+      "description": "Post title",
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "string",
+      "label": "URL Slug",
+      "required": true,
+      "description": "URL slug for the post",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "excerpt": {
+      "type": "text",
+      "label": "Excerpt",
+      "description": "Short description or excerpt",
+      "maxLength": 500
+    },
+    "content": {
+      "type": "rich-text",
+      "label": "Content",
+      "required": true,
+      "description": "Post content with rich text and markdown support"
+    },
+    "featuredImage": {
+      "type": "media",
+      "label": "Featured Image",
+      "mediaTypes": [
+        "image"
+      ],
+      "description": "Featured image for the post"
+    },
+    "tags": {
+      "type": "array",
+      "label": "Tags",
+      "description": "Post tags",
+      "items": {
+        "type": "string",
+        "label": "Tag"
+      }
+    },
+    "category": {
+      "type": "select",
+      "label": "Category",
+      "options": [
+        {
+          "label": "Technology",
+          "value": "technology"
+        },
+        {
+          "label": "Lifestyle",
+          "value": "lifestyle"
+        },
+        {
+          "label": "Business",
+          "value": "business"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "description": "Post category"
+    },
+    "published": {
+      "type": "boolean",
+      "label": "Published",
+      "description": "Whether the post is published",
+      "defaultValue": false
+    },
+    "publishedAt": {
+      "type": "datetime",
+      "label": "Published At",
+      "description": "Publication date and time"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author",
+      "description": "Post author"
+    }
+  },
+  "config": {
+    "slug": {
+      "field": "slug",
+      "unique": true
+    },
+    "timestamps": {
+      "createdAt": "createdAt",
+      "updatedAt": "updatedAt"
+    },
+    "preview": {
+      "fields": [
+        "title",
+        "excerpt",
+        "featuredImage"
+      ]
+    }
+  }
+}

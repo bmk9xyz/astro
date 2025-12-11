@@ -1,0 +1,120 @@
+{
+  "id": "product",
+  "metadata": {
+    "name": "Product",
+    "version": "1.0.0",
+    "description": "E-commerce product content type",
+    "category": "E-commerce",
+    "icon": "🛍️",
+    "createdAt": "2025-12-11T06:14:58.871Z",
+    "updatedAt": "2025-12-11T06:14:58.871Z"
+  },
+  "fields": {
+    "name": {
+      "type": "string",
+      "label": "Product Name",
+      "required": true,
+      "description": "Product name",
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "string",
+      "label": "URL Slug",
+      "required": true,
+      "description": "URL slug for the product",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "description": {
+      "type": "text",
+      "label": "Description",
+      "required": true,
+      "description": "Product description",
+      "maxLength": 1000
+    },
+    "content": {
+      "type": "rich-text",
+      "label": "Content",
+      "description": "Detailed product information with rich text and markdown support"
+    },
+    "price": {
+      "type": "number",
+      "label": "Price",
+      "required": true,
+      "description": "Product price",
+      "min": 0,
+      "step": 0.01
+    },
+    "compareAtPrice": {
+      "type": "number",
+      "label": "Compare At Price",
+      "description": "Original price for comparison",
+      "min": 0,
+      "step": 0.01
+    },
+    "sku": {
+      "type": "string",
+      "label": "SKU",
+      "description": "Stock keeping unit"
+    },
+    "featuredImage": {
+      "type": "media",
+      "label": "Featured Image",
+      "mediaTypes": [
+        "image"
+      ],
+      "description": "Featured product image"
+    },
+    "gallery": {
+      "type": "array",
+      "label": "Gallery",
+      "description": "Product gallery images",
+      "items": {
+        "type": "media",
+        "label": "Image",
+        "mediaTypes": [
+          "image"
+        ]
+      }
+    },
+    "category": {
+      "type": "string",
+      "label": "Category",
+      "description": "Product category"
+    },
+    "tags": {
+      "type": "array",
+      "label": "Tags",
+      "description": "Product tags",
+      "items": {
+        "type": "string",
+        "label": "Tag"
+      }
+    },
+    "inStock": {
+      "type": "boolean",
+      "label": "In Stock",
+      "description": "Whether the product is in stock",
+      "defaultValue": true
+    },
+    "featured": {
+      "type": "boolean",
+      "label": "Featured",
+      "description": "Whether the product is featured",
+      "defaultValue": false
+    }
+  },
+  "config": {
+    "slug": {
+      "field": "slug",
+      "unique": true
+    },
+    "preview": {
+      "fields": [
+        "name",
+        "description",
+        "featuredImage",
+        "price"
+      ]
+    }
+  }
+}
