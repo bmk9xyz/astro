@@ -7,7 +7,7 @@
     {
       "name": "blog",
       "label": "Blog",
-      "path": "src/content/blog",
+      "path": "src/content/blogs",
       "format": "md",
       "fields": [
         {
