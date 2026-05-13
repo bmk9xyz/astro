@@ -5,74 +5,40 @@
   },
   "collections": [
     {
-      "name": "blog",
-      "label": "Blog",
+      "name": "blogs",
+      "label": "Blogs",
       "path": "src/content/blogs",
       "format": "md",
       "fields": [
         {
           "name": "title",
-          "label": "Title",
+          "label": "Tiêu đề",
           "type": "string",
           "required": true
         },
         {
           "name": "description",
-          "label": "SEO description",
+          "label": "Mô tả SEO",
           "type": "text"
         },
         {
           "name": "pubDate",
-          "label": "Published date",
+          "label": "Ngày đăng",
           "type": "date"
         },
         {
           "name": "image",
-          "label": "Cover image",
+          "label": "Ảnh đại diện",
           "type": "image"
         },
         {
           "name": "draft",
-          "label": "Draft",
+          "label": "Bản nháp",
           "type": "boolean"
         },
         {
           "name": "body",
-          "label": "Content",
-          "type": "markdown"
-        }
-      ]
-    },
-    {
-      "name": "products",
-      "label": "Products",
-      "path": "src/content/products",
-      "format": "md",
-      "fields": [
-        {
-          "name": "title",
-          "label": "Product name",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "description",
-          "label": "SEO description",
-          "type": "text"
-        },
-        {
-          "name": "category",
-          "label": "Category",
-          "type": "string"
-        },
-        {
-          "name": "image",
-          "label": "Product image",
-          "type": "image"
-        },
-        {
-          "name": "body",
-          "label": "Content",
+          "label": "Nội dung",
           "type": "markdown"
         }
       ]
