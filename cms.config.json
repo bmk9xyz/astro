@@ -1,0 +1,81 @@
+{
+  "media": {
+    "input": "public/uploads",
+    "output": "/uploads"
+  },
+  "collections": [
+    {
+      "name": "blog",
+      "label": "Blog",
+      "path": "src/content/blog",
+      "format": "md",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "SEO description",
+          "type": "text"
+        },
+        {
+          "name": "pubDate",
+          "label": "Published date",
+          "type": "date"
+        },
+        {
+          "name": "image",
+          "label": "Cover image",
+          "type": "image"
+        },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "type": "boolean"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown"
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "label": "Products",
+      "path": "src/content/products",
+      "format": "md",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Product name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "SEO description",
+          "type": "text"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string"
+        },
+        {
+          "name": "image",
+          "label": "Product image",
+          "type": "image"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown"
+        }
+      ]
+    }
+  ]
+}
