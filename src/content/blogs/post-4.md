@@ -2,13 +2,7 @@
 title: "Bài mới 01"
 description: "This post will show up on its own!"
 pubDate: "2024-02-07"
-author: "Astro-naut Sid"
-tags: "|-"
 draft: false
-image: ""
-url: "src/assets/images/2.jpg"
-alt: "The word astro against an illustration of planets and stars."
-date: "2025-09-15"
 ---
 
 This is my fourth post should show up with my other blog posts, because `import.meta.glob()` is returning a list of all my posts in order to create my list.
