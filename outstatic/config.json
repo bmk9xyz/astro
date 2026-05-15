@@ -1,0 +1,15 @@
+{
+  "media": [
+    {
+      "categories": [
+        "image"
+      ],
+      "input": "public/uploads",
+      "label": "e",
+      "name": "e",
+      "output": "/uploads"
+    }
+  ],
+  "publicMediaPath": "uploads/",
+  "repoMediaPath": "public/uploads/"
+}
