@@ -30,42 +30,72 @@
           "label": "Mô tả SEO",
           "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "pubDate",
           "label": "Ngày đăng",
           "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "image",
           "label": "Ảnh đại diện",
           "type": "image",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "body",
           "label": "Nội dung",
           "type": "markdown",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "draft",
           "label": "Bản nháp",
           "type": "boolean",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "field_7",
           "label": "Field 7",
           "type": "string",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         },
         {
           "name": "field_8",
