@@ -114,6 +114,30 @@
           "description": "aaaa"
         }
       ]
+    },
+    {
+      "name": "content_2",
+      "label": "Content 2",
+      "path": "src/content/content-2",
+      "format": "md",
+      "description": "",
+      "showPermalink": true,
+      "showMediaFields": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown",
+          "placement": "main"
+        }
+      ]
     }
   ]
 }
