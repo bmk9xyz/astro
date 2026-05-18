@@ -9,37 +9,51 @@
       "label": "Blogs",
       "path": "src/content/blogs",
       "format": "md",
+      "description": "",
       "fields": [
         {
           "name": "title",
           "label": "Tiêu đề",
-          "type": "string",
-          "required": true
+          "type": "oembed",
+          "placement": "main",
+          "required": false,
+          "multiple": false
         },
         {
           "name": "description",
           "label": "Mô tả SEO",
-          "type": "text"
+          "type": "text",
+          "placement": "main"
         },
         {
           "name": "pubDate",
           "label": "Ngày đăng",
-          "type": "date"
+          "type": "date",
+          "placement": "main"
         },
         {
           "name": "image",
           "label": "Ảnh đại diện",
-          "type": "image"
-        },
-        {
-          "name": "draft",
-          "label": "Bản nháp",
-          "type": "boolean"
+          "type": "image",
+          "placement": "main"
         },
         {
           "name": "body",
           "label": "Nội dung",
-          "type": "markdown"
+          "type": "markdown",
+          "placement": "main"
+        },
+        {
+          "name": "draft",
+          "label": "Bản nháp",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "field_7",
+          "label": "Field 7",
+          "type": "string",
+          "placement": "main"
         }
       ]
     }
