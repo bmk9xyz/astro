@@ -9,7 +9,7 @@
       "label": "Blogsssss",
       "path": "src/content/blogs",
       "format": "md",
-      "description": "",
+      "description": "Bài blog tất cả",
       "showPermalink": true,
       "showMediaFields": false,
       "fields": [
