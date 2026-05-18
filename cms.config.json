@@ -29,7 +29,7 @@
           "name": "description",
           "label": "Mô tả SEO",
           "type": "text",
-          "placement": "main",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
