@@ -66,6 +66,20 @@
           "type": "string",
           "placement": "main",
           "locationRules": []
+        },
+        {
+          "name": "field_8",
+          "label": "Field 8",
+          "type": "string",
+          "placement": "sidebar",
+          "locationRules": [
+            {
+              "type": "content_type",
+              "value": "blog",
+              "operator": "is"
+            }
+          ],
+          "description": "aaaa"
         }
       ]
     }
