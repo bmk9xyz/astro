@@ -14,8 +14,9 @@
         {
           "name": "title",
           "label": "Tiêu đề",
-          "type": "oembed",
+          "type": "string",
           "placement": "main",
+          "locationRules": [],
           "required": false,
           "multiple": false
         },
@@ -23,37 +24,43 @@
           "name": "description",
           "label": "Mô tả SEO",
           "type": "text",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "pubDate",
           "label": "Ngày đăng",
           "type": "date",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "image",
           "label": "Ảnh đại diện",
           "type": "image",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Nội dung",
           "type": "markdown",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "draft",
           "label": "Bản nháp",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "field_7",
           "label": "Field 7",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     }
