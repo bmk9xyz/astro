@@ -15,7 +15,7 @@
           "name": "title",
           "label": "Tiêu đề",
           "type": "string",
-          "placement": "main",
+          "placement": "sidebar",
           "locationRules": [],
           "required": false,
           "multiple": false
