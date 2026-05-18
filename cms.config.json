@@ -10,6 +10,8 @@
       "path": "src/content/blogs",
       "format": "md",
       "description": "",
+      "showPermalink": true,
+      "showMediaFields": false,
       "fields": [
         {
           "name": "title",
