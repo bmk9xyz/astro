@@ -22,7 +22,7 @@
               "operator": "is"
             }
           ],
-          "required": false,
+          "required": true,
           "multiple": false
         },
         {
