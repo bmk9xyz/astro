@@ -16,7 +16,12 @@
           "label": "Tiêu đề",
           "type": "string",
           "placement": "sidebar",
-          "locationRules": [],
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ],
           "required": false,
           "multiple": false
         },
