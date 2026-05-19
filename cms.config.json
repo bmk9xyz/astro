@@ -1,0 +1,349 @@
+{
+  "media": {
+    "input": "public/uploads",
+    "output": "/uploads"
+  },
+  "collections": [
+    {
+      "name": "blogs",
+      "label": "Blogs",
+      "path": "src/content/blogs",
+      "format": "md",
+      "bodyEditor": "split",
+      "showMediaFields": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "datetime",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel"
+          ],
+          "multiple": true,
+          "placement": "main"
+        },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "seo_title",
+          "label": "Seo Title",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_description",
+          "label": "Seo Description",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_keywords",
+          "label": "Seo Keywords",
+          "type": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "descriptiond",
+          "label": "Descriptiond",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "keywords",
+          "label": "Keywords",
+          "type": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "seo",
+          "label": "Seo",
+          "type": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image",
+          "placement": "main"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "select",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid"
+          ],
+          "placement": "main"
+        },
+        {
+          "name": "updated",
+          "label": "Updated",
+          "type": "datetime",
+          "placement": "main"
+        },
+        {
+          "name": "url",
+          "label": "Url",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "alt",
+          "label": "Alt",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "pubDate",
+          "label": "PubDate",
+          "type": "datetime",
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "label": "Content",
+      "path": "src/content",
+      "format": "mdx",
+      "bodyEditor": "split",
+      "showMediaFields": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image",
+          "placement": "main"
+        },
+        {
+          "name": "pubDate",
+          "label": "PubDate",
+          "type": "date",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "label": "Posts",
+      "path": "src/content/posts",
+      "format": "md",
+      "bodyEditor": "split",
+      "showMediaFields": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "options": [
+            "s"
+          ],
+          "multiple": true,
+          "placement": "main"
+        },
+        {
+          "name": "keywords",
+          "label": "Keywords",
+          "type": "taxonomy",
+          "options": [
+            "s"
+          ],
+          "multiple": true,
+          "placement": "main"
+        },
+        {
+          "name": "seo",
+          "label": "Seo",
+          "type": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "datetime",
+          "placement": "main"
+        },
+        {
+          "name": "updated",
+          "label": "Updated",
+          "type": "datetime",
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "blogs",
+      "label": "Blogs",
+      "path": "content/blogs",
+      "format": "md",
+      "bodyEditor": "split",
+      "showMediaFields": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "date",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "string",
+          "placement": "seo"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string",
+          "placement": "main"
+        },
+        {
+          "name": "seo_title",
+          "label": "Seo Title",
+          "type": "date",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_description",
+          "label": "Seo Description",
+          "type": "date",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_keywords",
+          "label": "Seo Keywords",
+          "type": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "markdown",
+          "placement": "main"
+        }
+      ]
+    }
+  ]
+}
