@@ -9,7 +9,9 @@
       "label": "Blogs",
       "path": "src/content/blogs",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "showMediaFields": true,
       "fields": [
         {
@@ -17,19 +19,22 @@
           "label": "Title",
           "type": "string",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "date",
           "label": "Date",
           "type": "datetime",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -43,67 +48,78 @@
             "space travel"
           ],
           "multiple": true,
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "draft",
           "label": "Draft",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "featured",
           "label": "Featured",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "category",
           "label": "Category",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "seo_title",
           "label": "Seo Title",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_description",
           "label": "Seo Description",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
           "type": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "descriptiond",
           "label": "Descriptiond",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "keywords",
           "label": "Keywords",
           "type": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "seo",
           "label": "Seo",
           "type": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "image",
           "label": "Image",
           "type": "image",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "author",
@@ -114,37 +130,43 @@
             "Minh Khánh",
             "Astro-naut Sid"
           ],
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "updated",
           "label": "Updated",
           "type": "datetime",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "url",
           "label": "Url",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "alt",
           "label": "Alt",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "pubDate",
           "label": "PubDate",
           "type": "datetime",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "markdown",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -153,7 +175,9 @@
       "label": "Content",
       "path": "src/content",
       "format": "mdx",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "showMediaFields": true,
       "fields": [
         {
@@ -161,43 +185,50 @@
           "label": "Title",
           "type": "string",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "author",
           "label": "Author",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "image",
           "label": "Image",
           "type": "image",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "pubDate",
           "label": "PubDate",
           "type": "date",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
           "label": "Tags",
           "type": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "markdown",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -206,7 +237,9 @@
       "label": "Posts",
       "path": "src/content/posts",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "showMediaFields": true,
       "fields": [
         {
@@ -214,7 +247,8 @@
           "label": "Title",
           "type": "string",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -224,7 +258,8 @@
             "s"
           ],
           "multiple": true,
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "keywords",
@@ -234,37 +269,43 @@
             "s"
           ],
           "multiple": true,
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "seo",
           "label": "Seo",
           "type": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "author",
           "label": "Author",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "date",
           "label": "Date",
           "type": "datetime",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "updated",
           "label": "Updated",
           "type": "datetime",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "markdown",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -273,7 +314,9 @@
       "label": "Blogs",
       "path": "content/blogs",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "showMediaFields": true,
       "fields": [
         {
@@ -281,67 +324,78 @@
           "label": "Title",
           "type": "date",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "string",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "date",
           "label": "Date",
           "type": "date",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
           "label": "Tags",
           "type": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "draft",
           "label": "Draft",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "featured",
           "label": "Featured",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "category",
           "label": "Category",
           "type": "string",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "seo_title",
           "label": "Seo Title",
           "type": "date",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_description",
           "label": "Seo Description",
           "type": "date",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
           "type": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "markdown",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     }
