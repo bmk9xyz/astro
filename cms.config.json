@@ -188,14 +188,15 @@
         {
           "name": "field_21",
           "label": "Field 21",
-          "type": "string",
+          "type": "text",
           "placement": "main",
           "locationRules": [
             {
               "type": "all",
               "operator": "is"
             }
-          ]
+          ],
+          "textMode": "text"
         },
         {
           "name": "field_22",
@@ -208,7 +209,7 @@
               "operator": "is"
             }
           ],
-          "textMode": "number"
+          "textMode": "email"
         }
       ]
     },
