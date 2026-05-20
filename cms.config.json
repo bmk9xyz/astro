@@ -212,6 +212,19 @@
           ],
           "textMode": "number",
           "collection": "blogs"
+        },
+        {
+          "name": "field_23",
+          "label": "Field 23",
+          "type": "message",
+          "placement": "main",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ],
+          "description": "aaaaaaaaaaaaaaaaaaa"
         }
       ]
     },
