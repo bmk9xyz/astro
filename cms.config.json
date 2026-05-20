@@ -202,7 +202,7 @@
         {
           "name": "field_22",
           "label": "Field 22",
-          "type": "choice",
+          "type": "relationship",
           "placement": "main",
           "locationRules": [
             {
@@ -210,13 +210,7 @@
               "operator": "is"
             }
           ],
-          "textMode": "number",
-          "choiceMode": "radio",
-          "options": [
-            "aaa, bbb, dd",
-            "ssss",
-            "dđ"
-          ]
+          "textMode": "number"
         }
       ]
     },
