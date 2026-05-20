@@ -21,8 +21,8 @@
           "placement": "main",
           "required": true,
           "locationRules": [],
-          "textMode": "text",
-          "multiple": true
+          "textMode": "number",
+          "multiple": false
         },
         {
           "name": "description",
