@@ -210,7 +210,8 @@
               "operator": "is"
             }
           ],
-          "textMode": "number"
+          "textMode": "number",
+          "collection": "blogs"
         }
       ]
     },
