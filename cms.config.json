@@ -21,8 +21,7 @@
           "placement": "main",
           "required": true,
           "locationRules": [],
-          "textMode": "number",
-          "multiple": false
+          "textMode": "number"
         },
         {
           "name": "description",
@@ -185,6 +184,31 @@
           "type": "markdown",
           "placement": "main",
           "locationRules": []
+        },
+        {
+          "name": "field_21",
+          "label": "Field 21",
+          "type": "string",
+          "placement": "main",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "field_22",
+          "label": "Field 22",
+          "type": "text",
+          "placement": "main",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ],
+          "textMode": "number"
         }
       ]
     },
