@@ -135,14 +135,15 @@
         {
           "name": "author",
           "label": "Author",
-          "type": "select",
+          "type": "choice",
           "options": [
             "ss",
             "Minh Khánh",
             "Astro-naut Sid"
           ],
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "choiceMode": "select"
         },
         {
           "name": "updated",
@@ -201,7 +202,7 @@
         {
           "name": "field_22",
           "label": "Field 22",
-          "type": "text",
+          "type": "choice",
           "placement": "main",
           "locationRules": [
             {
@@ -209,7 +210,11 @@
               "operator": "is"
             }
           ],
-          "textMode": "number"
+          "textMode": "number",
+          "choiceMode": "radio",
+          "options": [
+            "aaa, bbb, dd"
+          ]
         }
       ]
     },
