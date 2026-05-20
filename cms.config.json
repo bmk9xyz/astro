@@ -213,7 +213,9 @@
           "textMode": "number",
           "choiceMode": "radio",
           "options": [
-            "aaa, bbb, dd"
+            "aaa, bbb, dd",
+            "ssss",
+            "dđ"
           ]
         }
       ]
