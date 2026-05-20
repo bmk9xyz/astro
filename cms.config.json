@@ -216,7 +216,7 @@
         {
           "name": "field_23",
           "label": "Field 23",
-          "type": "message",
+          "type": "accordion",
           "placement": "main",
           "locationRules": [
             {
