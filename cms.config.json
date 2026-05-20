@@ -17,24 +17,29 @@
         {
           "name": "title",
           "label": "Title",
-          "type": "string",
+          "type": "text",
           "placement": "main",
           "required": true,
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text",
+          "multiple": true
         },
         {
           "name": "description",
           "label": "Description",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "date",
           "label": "Date",
-          "type": "datetime",
+          "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "datetime",
+          "dateFormat": "iso"
         },
         {
           "name": "tags",
@@ -68,51 +73,58 @@
         {
           "name": "category",
           "label": "Category",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "seo_title",
           "label": "Seo Title",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "seo_description",
           "label": "Seo Description",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
-          "type": "textarea",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "descriptiond",
           "label": "Descriptiond",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "keywords",
           "label": "Keywords",
-          "type": "textarea",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "seo",
           "label": "Seo",
-          "type": "textarea",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "image",
@@ -136,30 +148,36 @@
         {
           "name": "updated",
           "label": "Updated",
-          "type": "datetime",
+          "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "datetime",
+          "dateFormat": "iso"
         },
         {
           "name": "url",
           "label": "Url",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "alt",
           "label": "Alt",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "pubDate",
           "label": "PubDate",
-          "type": "datetime",
+          "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "datetime",
+          "dateFormat": "iso"
         },
         {
           "name": "body",
@@ -183,24 +201,27 @@
         {
           "name": "title",
           "label": "Title",
-          "type": "string",
+          "type": "text",
           "placement": "main",
           "required": true,
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "description",
           "label": "Description",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "author",
           "label": "Author",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "image",
@@ -214,14 +235,17 @@
           "label": "PubDate",
           "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "date",
+          "dateFormat": "iso"
         },
         {
           "name": "tags",
           "label": "Tags",
-          "type": "textarea",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "body",
@@ -245,10 +269,11 @@
         {
           "name": "title",
           "label": "Title",
-          "type": "string",
+          "type": "text",
           "placement": "main",
           "required": true,
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "tags",
@@ -275,30 +300,36 @@
         {
           "name": "seo",
           "label": "Seo",
-          "type": "textarea",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "author",
           "label": "Author",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "date",
           "label": "Date",
-          "type": "datetime",
+          "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "datetime",
+          "dateFormat": "iso"
         },
         {
           "name": "updated",
           "label": "Updated",
-          "type": "datetime",
+          "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "datetime",
+          "dateFormat": "iso"
         },
         {
           "name": "body",
@@ -325,28 +356,34 @@
           "type": "date",
           "placement": "main",
           "required": true,
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "date",
+          "dateFormat": "iso"
         },
         {
           "name": "description",
           "label": "Description",
-          "type": "string",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "date",
           "label": "Date",
           "type": "date",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "date",
+          "dateFormat": "iso"
         },
         {
           "name": "tags",
           "label": "Tags",
-          "type": "textarea",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "draft",
@@ -365,30 +402,36 @@
         {
           "name": "category",
           "label": "Category",
-          "type": "string",
+          "type": "text",
           "placement": "main",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "text"
         },
         {
           "name": "seo_title",
           "label": "Seo Title",
           "type": "date",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "date",
+          "dateFormat": "iso"
         },
         {
           "name": "seo_description",
           "label": "Seo Description",
           "type": "date",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "dateMode": "date",
+          "dateFormat": "iso"
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
-          "type": "textarea",
+          "type": "text",
           "placement": "seo",
-          "locationRules": []
+          "locationRules": [],
+          "textMode": "textarea"
         },
         {
           "name": "body",
