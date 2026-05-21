@@ -24,14 +24,6 @@
           "textMode": "number"
         },
         {
-          "name": "description",
-          "label": "Description",
-          "type": "text",
-          "placement": "seo",
-          "locationRules": [],
-          "textMode": "text"
-        },
-        {
           "name": "date",
           "label": "Date",
           "type": "date",
@@ -76,30 +68,6 @@
           "placement": "main",
           "locationRules": [],
           "textMode": "text"
-        },
-        {
-          "name": "seo_title",
-          "label": "Seo Title",
-          "type": "text",
-          "placement": "seo",
-          "locationRules": [],
-          "textMode": "text"
-        },
-        {
-          "name": "seo_description",
-          "label": "Seo Description",
-          "type": "text",
-          "placement": "seo",
-          "locationRules": [],
-          "textMode": "text"
-        },
-        {
-          "name": "seo_keywords",
-          "label": "Seo Keywords",
-          "type": "text",
-          "placement": "seo",
-          "locationRules": [],
-          "textMode": "textarea"
         },
         {
           "name": "descriptiond",
@@ -216,7 +184,7 @@
         {
           "name": "field_23",
           "label": "Field 23",
-          "type": "accordion",
+          "type": "group",
           "placement": "main",
           "locationRules": [
             {
@@ -224,7 +192,94 @@
               "operator": "is"
             }
           ],
-          "description": "aaaaaaaaaaaaaaaaaaa"
+          "description": "aaaaaaaaaaaaaaaaaaa",
+          "groupMode": "accordion",
+          "groupItems": 1,
+          "groupLabels": [
+            ""
+          ],
+          "fields": []
+        },
+        {
+          "name": "seoTitle",
+          "label": "SEO Title",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo",
+          "description": "Tieu de hien tren Google. Nen dai khoang 35-60 ky tu.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "description",
+          "label": "Meta Description",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "seo",
+          "description": "Mo ta ngan hien tren Google. Nen dai khoang 120-160 ky tu.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "focusKeyword",
+          "label": "Focus Keyword",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo",
+          "description": "Tu khoa chinh dung de cham diem SEO cho bai viet.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "canonicalUrl",
+          "label": "Canonical URL",
+          "type": "link",
+          "placement": "seo",
+          "description": "URL chuan neu bai viet co nhieu duong dan hoac noi dung trung lap.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "robotsNoindex",
+          "label": "Noindex",
+          "type": "boolean",
+          "placement": "seo",
+          "description": "Bat neu khong muon cong cu tim kiem index bai viet nay.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "ogImage",
+          "label": "Social Image",
+          "type": "image",
+          "placement": "seo",
+          "description": "Anh dai dien khi chia se len Facebook, Zalo, X hoac cac mang xa hoi.",
+          "locationRules": [
+            {
+              "type": "all",
+              "operator": "is"
+            }
+          ]
         }
       ]
     },
