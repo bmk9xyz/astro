@@ -279,18 +279,6 @@
               "operator": "is"
             }
           ]
-        },
-        {
-          "name": "taxonomy_1",
-          "label": "Taxonomy 1",
-          "description": "",
-          "type": "taxonomy",
-          "taxonomy": "taxonomy_1",
-          "managedBy": "siteTaxonomy",
-          "placement": "sidebar",
-          "options": [],
-          "multiple": true,
-          "locationRules": []
         }
       ]
     },
@@ -542,34 +530,10 @@
           "type": "markdown",
           "placement": "main",
           "locationRules": []
-        },
-        {
-          "name": "taxonomy_1",
-          "label": "Taxonomy 1",
-          "description": "",
-          "type": "taxonomy",
-          "taxonomy": "taxonomy_1",
-          "managedBy": "siteTaxonomy",
-          "placement": "sidebar",
-          "options": [],
-          "multiple": true,
-          "locationRules": []
         }
       ]
     }
   ],
-  "taxonomies": [
-    {
-      "name": "taxonomy_1",
-      "label": "Taxonomy 1",
-      "collections": [
-        "blogs"
-      ],
-      "hierarchical": false,
-      "multiple": true,
-      "terms": [],
-      "description": ""
-    }
-  ],
+  "taxonomies": [],
   "attributes": []
 }
