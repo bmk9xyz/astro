@@ -3,6 +3,70 @@
     "input": "public/uploads",
     "output": "/uploads"
   },
+  "taxonomies": [
+    {
+      "name": "tags",
+      "label": "Tags",
+      "collections": [
+        "blogs",
+        "content",
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "astro",
+        "space",
+        "stars",
+        "space exploration",
+        "space travel",
+        "s"
+      ],
+      "description": ""
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "collections": [
+        "blogs"
+      ],
+      "hierarchical": true,
+      "multiple": true,
+      "terms": [],
+      "description": ""
+    },
+    {
+      "name": "author",
+      "label": "Author",
+      "collections": [
+        "blogs",
+        "content",
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "ss",
+        "Minh Khánh",
+        "Astro-naut Sid"
+      ],
+      "description": ""
+    },
+    {
+      "name": "keywords",
+      "label": "Keywords",
+      "collections": [
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "s"
+      ],
+      "description": ""
+    }
+  ],
+  "attributes": [],
   "collections": [
     {
       "name": "blogs",
@@ -17,8 +81,8 @@
           "name": "title",
           "label": "Title",
           "type": "text",
-          "placement": "main",
           "required": true,
+          "placement": "main",
           "locationRules": [],
           "textMode": "number"
         },
@@ -35,16 +99,20 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "placement": "sidebar",
+          "locationRules": [],
           "options": [
             "astro",
             "space",
             "stars",
             "space exploration",
-            "space travel"
+            "space travel",
+            "s"
           ],
           "multiple": true,
-          "placement": "main",
-          "locationRules": []
+          "description": "",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "draft",
@@ -63,10 +131,15 @@
         {
           "name": "category",
           "label": "Category",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text"
+          "textMode": "text",
+          "description": "",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy",
+          "options": [],
+          "multiple": true
         },
         {
           "name": "descriptiond",
@@ -102,15 +175,18 @@
         {
           "name": "author",
           "label": "Author",
-          "type": "choice",
+          "type": "taxonomy",
+          "placement": "sidebar",
+          "locationRules": [],
           "options": [
             "ss",
             "Minh Khánh",
             "Astro-naut Sid"
           ],
-          "placement": "main",
-          "locationRules": [],
-          "choiceMode": "select"
+          "description": "",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "multiple": true
         },
         {
           "name": "updated",
@@ -184,6 +260,7 @@
           "name": "field_23",
           "label": "Field 23",
           "type": "group",
+          "description": "aaaaaaaaaaaaaaaaaaa",
           "placement": "main",
           "locationRules": [
             {
@@ -191,7 +268,6 @@
               "operator": "is"
             }
           ],
-          "description": "aaaaaaaaaaaaaaaaaaa",
           "groupMode": "accordion",
           "groupItems": 1,
           "groupLabels": [
@@ -203,50 +279,50 @@
           "name": "seoTitle",
           "label": "SEO Title",
           "type": "text",
-          "textMode": "text",
-          "placement": "seo",
           "description": "Tieu de hien tren Google. Nen dai khoang 35-60 ky tu.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
               "operator": "is"
             }
-          ]
+          ],
+          "textMode": "text"
         },
         {
           "name": "description",
           "label": "Meta Description",
           "type": "text",
-          "textMode": "textarea",
-          "placement": "seo",
           "description": "Mo ta ngan hien tren Google. Nen dai khoang 120-160 ky tu.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
               "operator": "is"
             }
-          ]
+          ],
+          "textMode": "textarea"
         },
         {
           "name": "focusKeyword",
           "label": "Focus Keyword",
           "type": "text",
-          "textMode": "text",
-          "placement": "seo",
           "description": "Tu khoa chinh dung de cham diem SEO cho bai viet.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
               "operator": "is"
             }
-          ]
+          ],
+          "textMode": "text"
         },
         {
           "name": "canonicalUrl",
           "label": "Canonical URL",
           "type": "link",
-          "placement": "seo",
           "description": "URL chuan neu bai viet co nhieu duong dan hoac noi dung trung lap.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
@@ -258,8 +334,8 @@
           "name": "robotsNoindex",
           "label": "Noindex",
           "type": "boolean",
-          "placement": "seo",
           "description": "Bat neu khong muon cong cu tim kiem index bai viet nay.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
@@ -271,8 +347,8 @@
           "name": "ogImage",
           "label": "Social Image",
           "type": "image",
-          "placement": "seo",
           "description": "Anh dai dien khi chia se len Facebook, Zalo, X hoac cac mang xa hoi.",
+          "placement": "seo",
           "locationRules": [
             {
               "type": "all",
@@ -295,8 +371,8 @@
           "name": "title",
           "label": "Title",
           "type": "text",
-          "placement": "main",
           "required": true,
+          "placement": "main",
           "locationRules": [],
           "textMode": "text"
         },
@@ -311,10 +387,19 @@
         {
           "name": "author",
           "label": "Author",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text"
+          "textMode": "text",
+          "description": "",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid"
+          ],
+          "multiple": true
         },
         {
           "name": "image",
@@ -335,10 +420,22 @@
         {
           "name": "tags",
           "label": "Tags",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "textarea"
+          "textMode": "textarea",
+          "description": "",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "s"
+          ],
+          "multiple": true
         },
         {
           "name": "body",
@@ -362,8 +459,8 @@
           "name": "title",
           "label": "Title",
           "type": "text",
-          "placement": "main",
           "required": true,
+          "placement": "main",
           "locationRules": [],
           "textMode": "text"
         },
@@ -371,23 +468,34 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "placement": "sidebar",
+          "locationRules": [],
           "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
             "s"
           ],
           "multiple": true,
-          "placement": "main",
-          "locationRules": []
+          "description": "",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "keywords",
           "label": "Keywords",
           "type": "taxonomy",
+          "placement": "sidebar",
+          "locationRules": [],
           "options": [
             "s"
           ],
           "multiple": true,
-          "placement": "main",
-          "locationRules": []
+          "description": "",
+          "taxonomy": "keywords",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "seo",
@@ -400,10 +508,19 @@
         {
           "name": "author",
           "label": "Author",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text"
+          "textMode": "text",
+          "description": "",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid"
+          ],
+          "multiple": true
         },
         {
           "name": "date",
@@ -445,8 +562,8 @@
           "name": "title",
           "label": "Title",
           "type": "date",
-          "placement": "main",
           "required": true,
+          "placement": "main",
           "locationRules": [],
           "dateMode": "date",
           "dateFormat": "iso"
@@ -471,10 +588,22 @@
         {
           "name": "tags",
           "label": "Tags",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "textarea"
+          "textMode": "textarea",
+          "description": "",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "s"
+          ],
+          "multiple": true
         },
         {
           "name": "draft",
@@ -493,10 +622,15 @@
         {
           "name": "category",
           "label": "Category",
-          "type": "text",
-          "placement": "main",
+          "type": "taxonomy",
+          "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text"
+          "textMode": "text",
+          "description": "",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy",
+          "options": [],
+          "multiple": true
         },
         {
           "name": "seo_title",
@@ -530,10 +664,28 @@
           "type": "markdown",
           "placement": "main",
           "locationRules": []
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "description": "",
+          "type": "taxonomy",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "placement": "sidebar",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid"
+          ],
+          "multiple": true,
+          "locationRules": []
         }
       ]
     }
   ],
-  "taxonomies": [],
-  "attributes": []
+  "redirects": {
+    "enabled": true,
+    "path": "redirect.config.json"
+  }
 }
