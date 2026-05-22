@@ -685,7 +685,7 @@
     }
   ],
   "redirects": {
-    "enabled": true,
+    "enabled": false,
     "path": "redirect.config.json"
   }
 }
