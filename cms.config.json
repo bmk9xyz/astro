@@ -689,7 +689,9 @@
     "path": "redirect.config.json"
   },
   "comments": {
-    "enabled": true,
-    "path": "comments.config.json"
+    "enabled": true
+  },
+  "contactForms": {
+    "enabled": true
   }
 }
