@@ -1,0 +1,13 @@
+---
+interface Props {
+  page?: string;
+  accent?: string;
+}
+
+const { page, accent = "#2563eb" } = Astro.props;
+const siteToken = "site_7eee1e17d3024b67ad1f115efdbb5db9";
+const apiOrigin = "http://localhost:8787";
+---
+
+<div data-git-cms-comments data-page={page}></div>
+<script src="/git-cms-comments.js" data-site={siteToken} data-api={apiOrigin} data-accent={accent} defer></script>
