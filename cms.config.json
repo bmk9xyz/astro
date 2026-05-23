@@ -3,10 +3,21 @@
     "input": "public/uploads",
     "output": "/uploads"
   },
+  "redirects": {
+    "enabled": true,
+    "path": "redirect.config.json"
+  },
+  "comments": {
+    "enabled": true
+  },
+  "contactForms": {
+    "enabled": true
+  },
   "taxonomies": [
     {
       "name": "tags",
       "label": "Tags",
+      "description": "",
       "collections": [
         "blogs",
         "content",
@@ -21,23 +32,23 @@
         "space exploration",
         "space travel",
         "s"
-      ],
-      "description": ""
+      ]
     },
     {
       "name": "category",
       "label": "Category",
+      "description": "",
       "collections": [
         "blogs"
       ],
       "hierarchical": true,
       "multiple": true,
-      "terms": [],
-      "description": ""
+      "terms": []
     },
     {
       "name": "author",
       "label": "Author",
+      "description": "",
       "collections": [
         "blogs",
         "content",
@@ -49,12 +60,12 @@
         "ss",
         "Minh Khánh",
         "Astro-naut Sid"
-      ],
-      "description": ""
+      ]
     },
     {
       "name": "keywords",
       "label": "Keywords",
+      "description": "",
       "collections": [
         "posts"
       ],
@@ -62,8 +73,7 @@
       "multiple": true,
       "terms": [
         "s"
-      ],
-      "description": ""
+      ]
     }
   ],
   "attributes": [],
@@ -72,10 +82,10 @@
       "name": "blogs",
       "label": "Blogs",
       "path": "src/content/blogs",
-      "format": "md",
       "description": "",
-      "bodyEditor": "split",
+      "format": "md",
       "showPermalink": true,
+      "bodyEditor": "split",
       "fields": [
         {
           "name": "title",
@@ -99,6 +109,7 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
           "options": [
@@ -110,7 +121,6 @@
             "s"
           ],
           "multiple": true,
-          "description": "",
           "taxonomy": "tags",
           "managedBy": "siteTaxonomy"
         },
@@ -132,14 +142,14 @@
           "name": "category",
           "label": "Category",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text",
-          "description": "",
-          "taxonomy": "category",
-          "managedBy": "siteTaxonomy",
           "options": [],
-          "multiple": true
+          "multiple": true,
+          "textMode": "text",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "descriptiond",
@@ -176,6 +186,7 @@
           "name": "author",
           "label": "Author",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
           "options": [
@@ -183,10 +194,9 @@
             "Minh Khánh",
             "Astro-naut Sid"
           ],
-          "description": "",
+          "multiple": true,
           "taxonomy": "author",
-          "managedBy": "siteTaxonomy",
-          "multiple": true
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "updated",
@@ -362,10 +372,10 @@
       "name": "content",
       "label": "Content",
       "path": "src/content",
-      "format": "mdx",
       "description": "",
-      "bodyEditor": "split",
+      "format": "mdx",
       "showPermalink": true,
+      "bodyEditor": "split",
       "fields": [
         {
           "name": "title",
@@ -388,18 +398,18 @@
           "name": "author",
           "label": "Author",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text",
-          "description": "",
-          "taxonomy": "author",
-          "managedBy": "siteTaxonomy",
           "options": [
             "ss",
             "Minh Khánh",
             "Astro-naut Sid"
           ],
-          "multiple": true
+          "multiple": true,
+          "textMode": "text",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "image",
@@ -421,12 +431,9 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "textarea",
-          "description": "",
-          "taxonomy": "tags",
-          "managedBy": "siteTaxonomy",
           "options": [
             "astro",
             "space",
@@ -435,7 +442,10 @@
             "space travel",
             "s"
           ],
-          "multiple": true
+          "multiple": true,
+          "textMode": "textarea",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "body",
@@ -450,10 +460,10 @@
       "name": "posts",
       "label": "Posts",
       "path": "src/content/posts",
-      "format": "md",
       "description": "",
-      "bodyEditor": "split",
+      "format": "md",
       "showPermalink": true,
+      "bodyEditor": "split",
       "fields": [
         {
           "name": "title",
@@ -468,6 +478,7 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
           "options": [
@@ -479,7 +490,6 @@
             "s"
           ],
           "multiple": true,
-          "description": "",
           "taxonomy": "tags",
           "managedBy": "siteTaxonomy"
         },
@@ -487,13 +497,13 @@
           "name": "keywords",
           "label": "Keywords",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
           "options": [
             "s"
           ],
           "multiple": true,
-          "description": "",
           "taxonomy": "keywords",
           "managedBy": "siteTaxonomy"
         },
@@ -509,18 +519,18 @@
           "name": "author",
           "label": "Author",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text",
-          "description": "",
-          "taxonomy": "author",
-          "managedBy": "siteTaxonomy",
           "options": [
             "ss",
             "Minh Khánh",
             "Astro-naut Sid"
           ],
-          "multiple": true
+          "multiple": true,
+          "textMode": "text",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "date",
@@ -553,10 +563,10 @@
       "name": "blogs",
       "label": "Blogs",
       "path": "content/blogs",
-      "format": "md",
       "description": "",
-      "bodyEditor": "split",
+      "format": "md",
       "showPermalink": true,
+      "bodyEditor": "split",
       "fields": [
         {
           "name": "title",
@@ -589,12 +599,9 @@
           "name": "tags",
           "label": "Tags",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "textarea",
-          "description": "",
-          "taxonomy": "tags",
-          "managedBy": "siteTaxonomy",
           "options": [
             "astro",
             "space",
@@ -603,7 +610,10 @@
             "space travel",
             "s"
           ],
-          "multiple": true
+          "multiple": true,
+          "textMode": "textarea",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "draft",
@@ -623,14 +633,14 @@
           "name": "category",
           "label": "Category",
           "type": "taxonomy",
+          "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "textMode": "text",
-          "description": "",
-          "taxonomy": "category",
-          "managedBy": "siteTaxonomy",
           "options": [],
-          "multiple": true
+          "multiple": true,
+          "textMode": "text",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "seo_title",
@@ -668,30 +678,20 @@
         {
           "name": "author",
           "label": "Author",
-          "description": "",
           "type": "taxonomy",
-          "taxonomy": "author",
-          "managedBy": "siteTaxonomy",
+          "description": "",
           "placement": "sidebar",
+          "locationRules": [],
           "options": [
             "ss",
             "Minh Khánh",
             "Astro-naut Sid"
           ],
           "multiple": true,
-          "locationRules": []
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy"
         }
       ]
     }
-  ],
-  "redirects": {
-    "enabled": true,
-    "path": "redirect.config.json"
-  },
-  "comments": {
-    "enabled": true
-  },
-  "contactForms": {
-    "enabled": true
-  }
+  ]
 }
