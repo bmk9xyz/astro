@@ -33,7 +33,8 @@
         "s",
         "blogging",
         "mars"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "category",
@@ -45,7 +46,8 @@
       "multiple": true,
       "terms": [
         "Technology"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "author",
@@ -62,7 +64,8 @@
         "Minh Khánh",
         "Astro-naut Sid",
         "sssss"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "keywords",
@@ -74,7 +77,8 @@
       "multiple": true,
       "terms": [
         "s"
-      ]
+      ],
+      "description": ""
     }
   ],
   "attributes": [],
@@ -83,10 +87,10 @@
       "name": "blogs",
       "label": "Blogs",
       "path": "src/content/blogs",
-      "description": "",
       "format": "md",
-      "showPermalink": true,
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -119,9 +123,9 @@
             "stars",
             "space exploration",
             "space travel",
+            "s",
             "blogging",
-            "mars",
-            "s"
+            "mars"
           ],
           "multiple": true,
           "taxonomy": "tags",
@@ -203,8 +207,7 @@
           ],
           "multiple": true,
           "taxonomy": "author",
-          "managedBy": "siteTaxonomy",
-          "choiceMode": "select"
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "updated",
@@ -380,10 +383,10 @@
       "name": "content",
       "label": "Content",
       "path": "src/content",
-      "description": "",
       "format": "mdx",
-      "showPermalink": true,
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -449,9 +452,9 @@
             "stars",
             "space exploration",
             "space travel",
+            "s",
             "blogging",
-            "mars",
-            "s"
+            "mars"
           ],
           "multiple": true,
           "textMode": "textarea",
@@ -471,10 +474,10 @@
       "name": "posts",
       "label": "Posts",
       "path": "src/content/posts",
-      "description": "",
       "format": "md",
-      "showPermalink": true,
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -498,9 +501,9 @@
             "stars",
             "space exploration",
             "space travel",
+            "s",
             "blogging",
-            "mars",
-            "s"
+            "mars"
           ],
           "multiple": true,
           "taxonomy": "tags",
@@ -577,10 +580,10 @@
       "name": "blogs",
       "label": "Blogs",
       "path": "content/blogs",
-      "description": "",
       "format": "md",
-      "showPermalink": true,
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -622,7 +625,9 @@
             "stars",
             "space exploration",
             "space travel",
-            "s"
+            "s",
+            "blogging",
+            "mars"
           ],
           "multiple": true,
           "textMode": "textarea",
@@ -650,7 +655,9 @@
           "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "options": [],
+          "options": [
+            "Technology"
+          ],
           "multiple": true,
           "textMode": "text",
           "taxonomy": "category",
@@ -699,7 +706,8 @@
           "options": [
             "ss",
             "Minh Khánh",
-            "Astro-naut Sid"
+            "Astro-naut Sid",
+            "sssss"
           ],
           "multiple": true,
           "taxonomy": "author",
