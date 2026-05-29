@@ -17,7 +17,6 @@
     {
       "name": "tags",
       "label": "Tags",
-      "description": "",
       "collections": [
         "blogs",
         "content",
@@ -31,24 +30,26 @@
         "stars",
         "space exploration",
         "space travel",
-        "s"
+        "s",
+        "blogging",
+        "mars"
       ]
     },
     {
       "name": "category",
       "label": "Category",
-      "description": "",
       "collections": [
         "blogs"
       ],
       "hierarchical": true,
       "multiple": true,
-      "terms": []
+      "terms": [
+        "Technology"
+      ]
     },
     {
       "name": "author",
       "label": "Author",
-      "description": "",
       "collections": [
         "blogs",
         "content",
@@ -59,13 +60,13 @@
       "terms": [
         "ss",
         "Minh Khánh",
-        "Astro-naut Sid"
+        "Astro-naut Sid",
+        "sssss"
       ]
     },
     {
       "name": "keywords",
       "label": "Keywords",
-      "description": "",
       "collections": [
         "posts"
       ],
@@ -118,11 +119,14 @@
             "stars",
             "space exploration",
             "space travel",
+            "blogging",
+            "mars",
             "s"
           ],
           "multiple": true,
           "taxonomy": "tags",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "textMode": "textarea"
         },
         {
           "name": "draft",
@@ -145,7 +149,9 @@
           "description": "",
           "placement": "sidebar",
           "locationRules": [],
-          "options": [],
+          "options": [
+            "Technology"
+          ],
           "multiple": true,
           "textMode": "text",
           "taxonomy": "category",
@@ -192,11 +198,13 @@
           "options": [
             "ss",
             "Minh Khánh",
-            "Astro-naut Sid"
+            "Astro-naut Sid",
+            "sssss"
           ],
           "multiple": true,
           "taxonomy": "author",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "choiceMode": "select"
         },
         {
           "name": "updated",
@@ -404,7 +412,8 @@
           "options": [
             "ss",
             "Minh Khánh",
-            "Astro-naut Sid"
+            "Astro-naut Sid",
+            "sssss"
           ],
           "multiple": true,
           "textMode": "text",
@@ -440,6 +449,8 @@
             "stars",
             "space exploration",
             "space travel",
+            "blogging",
+            "mars",
             "s"
           ],
           "multiple": true,
@@ -487,6 +498,8 @@
             "stars",
             "space exploration",
             "space travel",
+            "blogging",
+            "mars",
             "s"
           ],
           "multiple": true,
@@ -525,7 +538,8 @@
           "options": [
             "ss",
             "Minh Khánh",
-            "Astro-naut Sid"
+            "Astro-naut Sid",
+            "sssss"
           ],
           "multiple": true,
           "textMode": "text",
