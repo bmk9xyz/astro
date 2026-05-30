@@ -1,0 +1,580 @@
+{
+  "media": {
+    "input": "public/uploads",
+    "output": "/uploads"
+  },
+  "taxonomies": [
+    {
+      "name": "tags",
+      "label": "Tags",
+      "collections": [
+        "blogs",
+        "content",
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "astro",
+        "space",
+        "stars",
+        "space exploration",
+        "space travel",
+        "blogging",
+        "mars",
+        "s"
+      ]
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "collections": [
+        "blogs"
+      ],
+      "hierarchical": true,
+      "multiple": true,
+      "terms": [
+        "Technology"
+      ]
+    },
+    {
+      "name": "author",
+      "label": "Author",
+      "collections": [
+        "blogs",
+        "content",
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "ss",
+        "Minh Khánh",
+        "Astro-naut Sid",
+        "sssss"
+      ]
+    },
+    {
+      "name": "keywords",
+      "label": "Keywords",
+      "collections": [
+        "posts"
+      ],
+      "hierarchical": false,
+      "multiple": true,
+      "terms": [
+        "s"
+      ]
+    }
+  ],
+  "attributes": [],
+  "collections": [
+    {
+      "name": "blogs",
+      "label": "Blogs",
+      "path": "src/content/blogs",
+      "format": "md",
+      "bodyEditor": "split",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "textMode": "text",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "blogging",
+            "mars",
+            "s"
+          ],
+          "multiple": true,
+          "placement": "sidebar",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
+        },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "taxonomy",
+          "textMode": "text",
+          "placement": "sidebar",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "Technology"
+          ],
+          "multiple": true
+        },
+        {
+          "name": "seo_title",
+          "label": "Seo Title",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_description",
+          "label": "Seo Description",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_keywords",
+          "label": "Seo Keywords",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "descriptiond",
+          "label": "Descriptiond",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "field_22",
+          "label": "Field 22",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "robotsNoindex",
+          "label": "RobotsNoindex",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "keywords",
+          "label": "Keywords",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "seo",
+          "label": "Seo",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image",
+          "placement": "main"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "taxonomy",
+          "choiceMode": "select",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid",
+            "sssss"
+          ],
+          "placement": "sidebar",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "multiple": true
+        },
+        {
+          "name": "updated",
+          "label": "Updated",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "autoUpdate": true,
+          "placement": "main"
+        },
+        {
+          "name": "url",
+          "label": "Url",
+          "type": "text",
+          "textMode": "text",
+          "placement": "main"
+        },
+        {
+          "name": "alt",
+          "label": "Alt",
+          "type": "text",
+          "textMode": "text",
+          "placement": "main"
+        },
+        {
+          "name": "pubDate",
+          "label": "PubDate",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "label": "Content",
+      "path": "src/content",
+      "format": "mdx",
+      "bodyEditor": "split",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "textMode": "text",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "taxonomy",
+          "textMode": "text",
+          "placement": "sidebar",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid",
+            "sssss"
+          ],
+          "multiple": true
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image",
+          "placement": "main"
+        },
+        {
+          "name": "pubDate",
+          "label": "PubDate",
+          "type": "date",
+          "dateMode": "date",
+          "dateFormat": "iso",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "blogging",
+            "mars",
+            "s"
+          ],
+          "multiple": true,
+          "placement": "sidebar",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
+        },
+        {
+          "name": "updatedAt",
+          "label": "Ngay cap nhat",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "autoUpdate": true,
+          "placement": "sidebar"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "label": "Posts",
+      "path": "src/content/posts",
+      "format": "md",
+      "bodyEditor": "split",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "textMode": "text",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "blogging",
+            "mars",
+            "s"
+          ],
+          "multiple": true,
+          "placement": "sidebar",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy"
+        },
+        {
+          "name": "keywords",
+          "label": "Keywords",
+          "type": "taxonomy",
+          "options": [
+            "s"
+          ],
+          "multiple": true,
+          "placement": "sidebar",
+          "taxonomy": "keywords",
+          "managedBy": "siteTaxonomy"
+        },
+        {
+          "name": "seo",
+          "label": "Seo",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "taxonomy",
+          "textMode": "text",
+          "placement": "sidebar",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid",
+            "sssss"
+          ],
+          "multiple": true
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "placement": "main"
+        },
+        {
+          "name": "updated",
+          "label": "Updated",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "autoUpdate": true,
+          "placement": "main"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        }
+      ]
+    },
+    {
+      "name": "blogs",
+      "label": "Blogs",
+      "path": "content/blogs",
+      "format": "md",
+      "bodyEditor": "split",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "date",
+          "dateMode": "date",
+          "dateFormat": "iso",
+          "placement": "main",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text",
+          "textMode": "text",
+          "placement": "seo"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "dateMode": "date",
+          "dateFormat": "iso",
+          "placement": "main"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "type": "taxonomy",
+          "textMode": "textarea",
+          "placement": "sidebar",
+          "taxonomy": "tags",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "astro",
+            "space",
+            "stars",
+            "space exploration",
+            "space travel",
+            "blogging",
+            "mars",
+            "s"
+          ],
+          "multiple": true
+        },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "placement": "main"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "taxonomy",
+          "textMode": "text",
+          "placement": "sidebar",
+          "taxonomy": "category",
+          "managedBy": "siteTaxonomy",
+          "options": [
+            "Technology"
+          ],
+          "multiple": true
+        },
+        {
+          "name": "seo_title",
+          "label": "Seo Title",
+          "type": "date",
+          "dateMode": "date",
+          "dateFormat": "iso",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_description",
+          "label": "Seo Description",
+          "type": "date",
+          "dateMode": "date",
+          "dateFormat": "iso",
+          "placement": "seo"
+        },
+        {
+          "name": "seo_keywords",
+          "label": "Seo Keywords",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "seo"
+        },
+        {
+          "name": "updatedAt",
+          "label": "Ngay cap nhat",
+          "type": "date",
+          "dateMode": "datetime",
+          "dateFormat": "iso",
+          "autoUpdate": true,
+          "placement": "sidebar"
+        },
+        {
+          "name": "body",
+          "label": "Content",
+          "type": "text",
+          "textMode": "textarea",
+          "placement": "main"
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "type": "taxonomy",
+          "taxonomy": "author",
+          "managedBy": "siteTaxonomy",
+          "placement": "sidebar",
+          "options": [
+            "ss",
+            "Minh Khánh",
+            "Astro-naut Sid",
+            "sssss"
+          ],
+          "multiple": true
+        }
+      ]
+    }
+  ]
+}
