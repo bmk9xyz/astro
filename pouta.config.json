@@ -3,7 +3,7 @@
     {
       "type": "posts",
       "label": "Blog Posts",
-      "writePath": "content/posts/{slug}.md",
+      "writePath": "content/blogs/{slug}.md",
       "fields": [
         { "name": "layout", "label": "Layout", "type": "select", "options": ["post", "page"] },
         { "name": "author", "label": "Author", "type": "select", "options": ["moha", "other-author"] },
