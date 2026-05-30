@@ -23,7 +23,8 @@
         "blogging",
         "mars",
         "s"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "category",
@@ -35,7 +36,8 @@
       "multiple": true,
       "terms": [
         "Technology"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "author",
@@ -52,7 +54,8 @@
         "Minh Khánh",
         "Astro-naut Sid",
         "sssss"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "keywords",
@@ -64,7 +67,8 @@
       "multiple": true,
       "terms": [
         "s"
-      ]
+      ],
+      "description": ""
     }
   ],
   "attributes": [],
@@ -74,7 +78,9 @@
       "label": "Blogs",
       "path": "src/content/blogs",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -82,14 +88,16 @@
           "type": "text",
           "textMode": "text",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "date",
@@ -97,7 +105,8 @@
           "type": "date",
           "dateMode": "datetime",
           "dateFormat": "iso",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -116,19 +125,23 @@
           "multiple": true,
           "placement": "sidebar",
           "taxonomy": "tags",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "draft",
           "label": "Draft",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "featured",
           "label": "Featured",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "category",
@@ -141,74 +154,84 @@
           "options": [
             "Technology"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "seo_title",
           "label": "Seo Title",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_description",
           "label": "Seo Description",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
           "type": "text",
           "textMode": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "descriptiond",
           "label": "Descriptiond",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "field_22",
           "label": "Field 22",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "robotsNoindex",
           "label": "RobotsNoindex",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "keywords",
           "label": "Keywords",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "seo",
           "label": "Seo",
           "type": "text",
           "textMode": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "image",
           "label": "Image",
           "type": "image",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "author",
           "label": "Author",
           "type": "taxonomy",
-          "choiceMode": "select",
           "options": [
             "ss",
             "Minh Khánh",
@@ -218,7 +241,9 @@
           "placement": "sidebar",
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "updated",
@@ -227,21 +252,24 @@
           "dateMode": "datetime",
           "dateFormat": "iso",
           "autoUpdate": true,
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "url",
           "label": "Url",
           "type": "text",
           "textMode": "text",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "alt",
           "label": "Alt",
           "type": "text",
           "textMode": "text",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "pubDate",
@@ -249,14 +277,16 @@
           "type": "date",
           "dateMode": "datetime",
           "dateFormat": "iso",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -265,7 +295,9 @@
       "label": "Content",
       "path": "src/content",
       "format": "mdx",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -273,14 +305,16 @@
           "type": "text",
           "textMode": "text",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "author",
@@ -296,13 +330,16 @@
             "Astro-naut Sid",
             "sssss"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "image",
           "label": "Image",
           "type": "image",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "pubDate",
@@ -310,7 +347,8 @@
           "type": "date",
           "dateMode": "date",
           "dateFormat": "iso",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -329,7 +367,9 @@
           "multiple": true,
           "placement": "sidebar",
           "taxonomy": "tags",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "updatedAt",
@@ -338,14 +378,16 @@
           "dateMode": "datetime",
           "dateFormat": "iso",
           "autoUpdate": true,
-          "placement": "sidebar"
+          "placement": "sidebar",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -354,7 +396,9 @@
       "label": "Posts",
       "path": "src/content/posts",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -362,7 +406,8 @@
           "type": "text",
           "textMode": "text",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -381,7 +426,9 @@
           "multiple": true,
           "placement": "sidebar",
           "taxonomy": "tags",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "keywords",
@@ -393,14 +440,17 @@
           "multiple": true,
           "placement": "sidebar",
           "taxonomy": "keywords",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "seo",
           "label": "Seo",
           "type": "text",
           "textMode": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "author",
@@ -416,7 +466,9 @@
             "Astro-naut Sid",
             "sssss"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "date",
@@ -424,7 +476,8 @@
           "type": "date",
           "dateMode": "datetime",
           "dateFormat": "iso",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "updated",
@@ -433,14 +486,16 @@
           "dateMode": "datetime",
           "dateFormat": "iso",
           "autoUpdate": true,
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         }
       ]
     },
@@ -449,7 +504,9 @@
       "label": "Blogs",
       "path": "content/blogs",
       "format": "md",
+      "description": "",
       "bodyEditor": "split",
+      "showPermalink": true,
       "fields": [
         {
           "name": "title",
@@ -458,14 +515,16 @@
           "dateMode": "date",
           "dateFormat": "iso",
           "placement": "main",
-          "required": true
+          "required": true,
+          "locationRules": []
         },
         {
           "name": "description",
           "label": "Description",
           "type": "text",
           "textMode": "text",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "date",
@@ -473,7 +532,8 @@
           "type": "date",
           "dateMode": "date",
           "dateFormat": "iso",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "tags",
@@ -493,19 +553,23 @@
             "mars",
             "s"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "draft",
           "label": "Draft",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "featured",
           "label": "Featured",
           "type": "boolean",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "category",
@@ -518,7 +582,9 @@
           "options": [
             "Technology"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         },
         {
           "name": "seo_title",
@@ -526,7 +592,8 @@
           "type": "date",
           "dateMode": "date",
           "dateFormat": "iso",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_description",
@@ -534,14 +601,16 @@
           "type": "date",
           "dateMode": "date",
           "dateFormat": "iso",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "seo_keywords",
           "label": "Seo Keywords",
           "type": "text",
           "textMode": "textarea",
-          "placement": "seo"
+          "placement": "seo",
+          "locationRules": []
         },
         {
           "name": "updatedAt",
@@ -550,14 +619,16 @@
           "dateMode": "datetime",
           "dateFormat": "iso",
           "autoUpdate": true,
-          "placement": "sidebar"
+          "placement": "sidebar",
+          "locationRules": []
         },
         {
           "name": "body",
           "label": "Content",
           "type": "text",
           "textMode": "textarea",
-          "placement": "main"
+          "placement": "main",
+          "locationRules": []
         },
         {
           "name": "author",
@@ -572,9 +643,21 @@
             "Astro-naut Sid",
             "sssss"
           ],
-          "multiple": true
+          "multiple": true,
+          "locationRules": [],
+          "description": ""
         }
       ]
     }
-  ]
+  ],
+  "redirects": {
+    "enabled": false,
+    "path": "redirect.config.json"
+  },
+  "comments": {
+    "enabled": false
+  },
+  "contactForms": {
+    "enabled": false
+  }
 }
