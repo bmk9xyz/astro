@@ -1,6 +1,6 @@
 (() => {
   const script = document.currentScript;
-  const siteToken = script?.dataset.site || script?.dataset.repository || "site_7eee1e17d3024b67ad1f115efdbb5db9";
+  const siteToken = script?.dataset.site || script?.dataset.repository || "site_9dea54b346bb420aa25e35b250568f00";
   const apiOrigin = (script?.dataset.api || "http://localhost:8787").replace(/\/$/, "");
   const accent = /^#[0-9a-f]{3,8}$/i.test(script?.dataset.accent || "") ? script.dataset.accent : "#2563eb";
   const renderedAt = Date.now();
