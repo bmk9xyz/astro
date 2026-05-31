@@ -659,5 +659,10 @@
   },
   "contactForms": {
     "enabled": false
+  },
+  "actions": {
+    "enabled": true,
+    "workflow": "",
+    "buttons": []
   }
 }
