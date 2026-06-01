@@ -662,7 +662,16 @@
   },
   "actions": {
     "enabled": true,
-    "workflow": "",
-    "buttons": []
+    "workflow": ".github/workflows/git-cms-actions.yml",
+    "buttons": [
+      {
+        "id": "action_1",
+        "label": "Action 1",
+        "description": "",
+        "action": "deploy",
+        "workflow": "",
+        "ref": ""
+      }
+    ]
   }
 }
