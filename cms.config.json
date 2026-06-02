@@ -23,8 +23,7 @@
         "blogging",
         "mars",
         "s"
-      ],
-      "description": ""
+      ]
     },
     {
       "name": "category",
@@ -36,8 +35,7 @@
       "multiple": true,
       "terms": [
         "Technology"
-      ],
-      "description": ""
+      ]
     },
     {
       "name": "author",
@@ -52,22 +50,23 @@
       "terms": [
         "Minh Khánh",
         "Astro-naut Sid",
-        "sssss"
-      ],
-      "description": ""
+        "sssss",
+        "ss"
+      ]
     },
     {
       "name": "keywords",
       "label": "Keywords",
       "collections": [
-        "posts"
+        "posts",
+        "blogs"
       ],
       "hierarchical": false,
       "multiple": true,
       "terms": [
-        "s"
-      ],
-      "description": ""
+        "s",
+        "aaa"
+      ]
     }
   ],
   "attributes": [],
@@ -126,7 +125,8 @@
           "taxonomy": "tags",
           "managedBy": "siteTaxonomy",
           "locationRules": [],
-          "description": ""
+          "description": "",
+          "textMode": "textarea"
         },
         {
           "name": "draft",
@@ -207,10 +207,17 @@
         {
           "name": "keywords",
           "label": "Keywords",
-          "type": "text",
+          "type": "taxonomy",
           "textMode": "textarea",
-          "placement": "main",
-          "locationRules": []
+          "placement": "sidebar",
+          "locationRules": [],
+          "options": [
+            "aaa",
+            "s"
+          ],
+          "multiple": true,
+          "taxonomy": "keywords",
+          "managedBy": "siteTaxonomy"
         },
         {
           "name": "seo",
@@ -232,6 +239,7 @@
           "label": "Author",
           "type": "taxonomy",
           "options": [
+            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
@@ -323,6 +331,7 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
+            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
@@ -432,6 +441,7 @@
           "label": "Keywords",
           "type": "taxonomy",
           "options": [
+            "aaa",
             "s"
           ],
           "multiple": true,
@@ -458,6 +468,7 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
+            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
