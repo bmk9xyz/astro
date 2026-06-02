@@ -50,7 +50,6 @@
       "hierarchical": false,
       "multiple": true,
       "terms": [
-        "ss",
         "Minh Khánh",
         "Astro-naut Sid",
         "sssss"
@@ -233,7 +232,6 @@
           "label": "Author",
           "type": "taxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
@@ -325,7 +323,6 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
@@ -461,7 +458,6 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
@@ -638,7 +634,6 @@
           "managedBy": "siteTaxonomy",
           "placement": "sidebar",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
             "sssss"
