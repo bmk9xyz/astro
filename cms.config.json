@@ -688,7 +688,7 @@
     "enabled": false
   },
   "actions": {
-    "enabled": false,
+    "enabled": true,
     "workflow": ".github/workflows/git-cms-actions.yml",
     "buttons": [
       {
