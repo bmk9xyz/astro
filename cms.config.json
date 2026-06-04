@@ -23,7 +23,8 @@
         "blogging",
         "mars",
         "s"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "category",
@@ -35,7 +36,8 @@
       "multiple": true,
       "terms": [
         "Technology"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "author",
@@ -52,7 +54,8 @@
         "Astro-naut Sid",
         "sssss",
         "ss"
-      ]
+      ],
+      "description": ""
     },
     {
       "name": "keywords",
@@ -66,7 +69,8 @@
       "terms": [
         "s",
         "aaa"
-      ]
+      ],
+      "description": ""
     }
   ],
   "attributes": [],
@@ -212,12 +216,13 @@
           "placement": "sidebar",
           "locationRules": [],
           "options": [
-            "aaa",
-            "s"
+            "s",
+            "aaa"
           ],
           "multiple": true,
           "taxonomy": "keywords",
-          "managedBy": "siteTaxonomy"
+          "managedBy": "siteTaxonomy",
+          "description": ""
         },
         {
           "name": "seo",
@@ -239,10 +244,10 @@
           "label": "Author",
           "type": "taxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
-            "sssss"
+            "sssss",
+            "ss"
           ],
           "placement": "sidebar",
           "taxonomy": "author",
@@ -331,10 +336,10 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
-            "sssss"
+            "sssss",
+            "ss"
           ],
           "multiple": true,
           "locationRules": [],
@@ -441,8 +446,8 @@
           "label": "Keywords",
           "type": "taxonomy",
           "options": [
-            "aaa",
-            "s"
+            "s",
+            "aaa"
           ],
           "multiple": true,
           "placement": "sidebar",
@@ -468,10 +473,10 @@
           "taxonomy": "author",
           "managedBy": "siteTaxonomy",
           "options": [
-            "ss",
             "Minh Khánh",
             "Astro-naut Sid",
-            "sssss"
+            "sssss",
+            "ss"
           ],
           "multiple": true,
           "locationRules": [],
@@ -647,11 +652,27 @@
           "options": [
             "Minh Khánh",
             "Astro-naut Sid",
-            "sssss"
+            "sssss",
+            "ss"
           ],
           "multiple": true,
           "locationRules": [],
           "description": ""
+        },
+        {
+          "name": "keywords",
+          "label": "Keywords",
+          "description": "",
+          "type": "taxonomy",
+          "taxonomy": "keywords",
+          "managedBy": "siteTaxonomy",
+          "placement": "sidebar",
+          "options": [
+            "s",
+            "aaa"
+          ],
+          "multiple": true,
+          "locationRules": []
         }
       ]
     }
@@ -667,7 +688,7 @@
     "enabled": false
   },
   "actions": {
-    "enabled": true,
+    "enabled": false,
     "workflow": ".github/workflows/git-cms-actions.yml",
     "buttons": [
       {
